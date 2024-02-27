@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Благодійний фонд Сергія Притули",
+        "category": "Weapons and Medicine",
+        "icon": "./foundations/pritula.png",
+        "url": "https://prytulafoundation.org"
+    },
+    {
+        "title": "Razom",
+        "category": "Humanitarian",
+        "icon": "./foundations/razom.png",
+        "url": "https://www.razomforukraine.org"
+    },
+    {
+        "title": "Masterkladki",
+        "category": "Transport",
+        "icon": "./foundations/masterkladki.jpg",
+        "url": "https://www.youtube.com/@masterkladki"
+    },
+    {
+        "title": "Blue / Yellow",
+        "category": "Transport and Weapons",
+        "icon": "./foundations/blue.png",
+        "url": "https://blue-yellow.lt"
+    },
+    {
+        "title": "Повернись живим",
+        "category": "Humanitarian",
+        "icon": "./foundations/back.png",
+        "url": "https://savelife.in.ua"
+    },
+    {
+        "title": "Mark Solonin",
+        "category": "Humanitarian",
+        "icon": "./foundations/mark.jpg",
+        "url": "https://www.youtube.com/@Mark_Solonin1941"
+    }
+]
