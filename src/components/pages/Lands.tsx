@@ -2,36 +2,38 @@ import React, {useState, useMemo, useEffect, useContext} from 'react'
 import ReactMapGL, {Marker} from 'react-map-gl'
 import {useQuery} from '@apollo/client'
 import Centum from 'centum.js'
-import {SEARCH_PERCENT, PROJECT_TITLE, VIEW_CONFIG, token} from '../../env/env'
+import {LAND_TYPES, CENTURES, SEARCH_PERCENT, PROJECT_TITLE, VIEW_CONFIG, token} from '../../env/env'
 import {gain} from '../../store/localstorage'
 import {Context} from '../../context/WebProvider'
 import NavigatorWrapper from '../router/NavigatorWrapper'
 import MapPicker from '../UI/MapPicker'
 import DataPagination from '../UI/DataPagination'
 import Loading from '../UI/Loading'
-import {getProfilesQ} from '../../graphql/pages/ProfilePageQueries'
+import {getLandsQ} from '../../graphql/pages/LandPageQueries'
 import {TownType, Cords} from '../../types/types'
 
-const Profiles: React.FC = () => {
+const Lands: React.FC = () => {
     const {context} = useContext<any>(Context)
     const [view, setView] = useState(VIEW_CONFIG)
     const [towns] = useState<TownType[]>(gain())
-    const [username, setUsername] = useState<string>('')
+    const [title, setTitle] = useState<string>('')
+    const [category, setCategory] = useState<string>(LAND_TYPES[0])
+    const [century, setCentury] = useState<string>(CENTURES[0])
     const [region, setRegion] = useState<string>(towns[0].title)
     const [cords, setCords] = useState<Cords>(towns[0].cords)
-    const [profiles, setProfiles] = useState<any[] | null>(null)
+    const [lands, setLands] = useState<any[] | null>(null)
     const [filtered, setFiltered] = useState<any[]>([])
 
     const centum = new Centum()
 
-    const {data, loading} = useQuery(getProfilesQ)
+    const {data, loading} = useQuery(getLandsQ)
 
     useEffect(() => {
         if (data && context.account_id !== '') {
-            setProfiles(data.getProfiles)
-           
-            centum.title('Profiles', PROJECT_TITLE)
-            centum.favicon('favicon-profiles')
+            setLands(data.getLands)
+
+            centum.title('Lands', PROJECT_TITLE)
+            centum.favicon('favicon-lands')
         }
     }, [data])
 
@@ -51,25 +53,27 @@ const Profiles: React.FC = () => {
     }, [cords])
 
     useMemo(() => {
-        if (profiles !== null) {
-            let result: any[] = profiles.filter(el => el.region === region)
+        if (lands !== null) {
+            let result: any[] = lands.filter(el => el.century === century && el.region === region)
 
-            if (username !== '') {
-                result = result.filter(el => centum.search(el.username, username, SEARCH_PERCENT, true))
+            if (title !== '') {
+                result = result.filter(el => centum.search(el.title, title, SEARCH_PERCENT, true))
             }
+
+            result = result.filter(el => el.category === category)
 
             setFiltered(result)
         }   
-    }, [profiles, username, region])
+    }, [lands, title, category, century, region])
 
     return (
         <>          
-            <h1>Find Individual</h1>
+            <h1>European Lands</h1>
 
             <div className='items small'>
                 <div className='item'>
-                    <h4 className='pale'>Name</h4>
-                    <input value={username} onChange={e => setUsername(e.target.value)} placeholder='Fullname' type='text' />
+                    <h4 className='pale'>Title</h4>
+                    <input value={title} onChange={e => setTitle(e.target.value)} placeholder='Title of land' type='text' />
                 </div>
                 <div className='item'>
                     <h4 className='pale'>Location</h4>
@@ -77,7 +81,17 @@ const Profiles: React.FC = () => {
                 </div>
             </div>
 
-            <DataPagination initialItems={filtered} setItems={setFiltered} label='Map of Profiles:' />
+            <h4 className='pale'>Type and Century</h4>
+    
+            <div className='items small'>
+                {LAND_TYPES.map(el => <div onClick={() => setCategory(el)} className={el === category ? 'item label active' : 'item label'}>{el}</div>)}
+            </div>
+
+            <select value={century} onChange={e => setCentury(e.target.value)}>
+                {CENTURES.map(el => <option value={el}>{el}</option>)}
+            </select>  
+
+            <DataPagination initialItems={filtered} setItems={setFiltered} label='Lands on Map:' />
 
             {data &&
                 <ReactMapGL onClick={e => setCords(centum.mapboxCords(e))} {...view} onViewportChange={(e: any) => setView(e)} mapboxApiAccessToken={token}>
@@ -87,8 +101,8 @@ const Profiles: React.FC = () => {
 
                     {filtered.map(el => 
                         <Marker latitude={el.cords.lat} longitude={el.cords.long}>
-                            <NavigatorWrapper id={el.account_id} isRedirect={true}>
-                                {centum.shorter(el.username)}
+                            <NavigatorWrapper url={`/land/${el.shortid}`} isRedirect={false}>
+                                {centum.shorter(el.title)}
                             </NavigatorWrapper>
                         </Marker>
                     )}
@@ -99,4 +113,4 @@ const Profiles: React.FC = () => {
     )
 }
 
-export default Profiles
+export default Lands

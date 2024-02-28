@@ -32,7 +32,7 @@ const Individuals: React.FC = () => {
             setIndividuals(data.getIndividuals)
            
             centum.title('Individuals', PROJECT_TITLE)
-            centum.favicon('favicon-pages')
+            centum.favicon('favicon-individuals')
         }
     }, [data])
 

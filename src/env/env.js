@@ -42,6 +42,14 @@ export const SIZES = ['Local', 'State', 'Federal']
 export const POLITICAL_TYPES = ['Liberal', 'Conservatism', 'Libertarianism']
 export const ISSUE_LEVELS = ['Low', 'Medium', 'High']
 
+// land
+
+export const LAND_TYPES = ['Hood', 'Nature', 'Park']
+
+export const FACT_TYPES = ['History', 'Life']
+export const FACT_LEVELS = ['Low', 'Medium', 'High', 'Ultra']
+export const LOCATION_TYPES = ['Building', 'Statue', 'Bridge']
+
 // system
 
 export const token = 'pk.eyJ1Ijoic2xhdnVzNTQiLCJhIjoiY2toYTAwYzdzMWF1dzJwbnptbGRiYmJqNyJ9.HzjnJX8t13sCZuVe2PiixA'

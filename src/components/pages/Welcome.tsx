@@ -15,7 +15,7 @@ const Welcome: React.FC = () => {
 
             <div className='items vert'>
                 {features.map(el => 
-                    <div className='item'>
+                    <div className='item case'>
                         <h3>{el.title}</h3>
                         <p>{el.text}</p>
                     </div>    

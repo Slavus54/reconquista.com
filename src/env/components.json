@@ -4,15 +4,19 @@
         "path": "individual"
     },
     {
+        "title": "Land",
+        "path": "land"
+    },
+    {
         "title": "Raid",
         "path": "raid"
     },
     {
-        "title": "Story",
-        "path": "story"
-    },
-    {
         "title": "Law",
         "path": "law"
+    },
+    {
+        "title": "Story",
+        "path": "story"
     }
 ]

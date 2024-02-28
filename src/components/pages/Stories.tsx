@@ -32,7 +32,7 @@ const Stories: React.FC = () => {
             setStories(data.getStories)
 
             centum.title('Stories', PROJECT_TITLE)
-            centum.favicon('favicon-pages')
+            centum.favicon('favicon-ukr')
         }
     }, [data])
 

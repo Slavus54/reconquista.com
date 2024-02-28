@@ -32,7 +32,7 @@ const Raids: React.FC = () => {
             setRaids(data.getRaids)
 
             centum.title('Raids', PROJECT_TITLE)
-            centum.favicon('favicon-pages')
+            centum.favicon('favicon-raids')
         }
     }, [data])
 

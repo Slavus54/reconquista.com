@@ -13,6 +13,9 @@ import Story from '../pages/Story'
 import CreateLaw from '../pages/CreateLaw'
 import Laws from '../pages/Laws'
 import Law from '../pages/Law'
+import CreateLand from '../pages/CreateLand'
+import Lands from '../pages/Lands'
+import Land from '../pages/Land'
 import Profiles from '../pages/Profiles'
 import Profile from '../pages/Profile'
 
@@ -38,6 +41,13 @@ export const routes: RouteType[] = [
         access_value: 1,
         url: '/individuals',
         component: Individuals,
+        isVisible: true
+    },
+    {
+        title: 'Lands',
+        access_value: 1,
+        url: '/lands',
+        component: Lands,
         isVisible: true
     },
     {
@@ -129,6 +139,20 @@ export const routes: RouteType[] = [
         access_value: 1,
         url: '/law/:id',
         component: Law,
+        isVisible: false
+    },
+    {
+        title: '',
+        access_value: 1,
+        url: '/create-land/:id',
+        component: CreateLand,
+        isVisible: false
+    },
+    {
+        title: '',
+        access_value: 1,
+        url: '/land/:id',
+        component: Land,
         isVisible: false
     },
     {

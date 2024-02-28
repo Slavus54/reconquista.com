@@ -241,7 +241,6 @@ input[type=text]:focus, textarea:focus {
 	border: none;
 	user-select: none;
 	cursor: pointer;
-	width: 100%;
 }
 
 .label {
@@ -279,6 +278,16 @@ input[type=text]:focus, textarea:focus {
 	border-radius: 0.1rem;
 	padding: 1rem;
 	margin-top: 1rem;
+}
+
+.case {
+	width: 50%;
+	opacity: .5;
+	transition: 0.1s ease-in-out;
+}
+
+.case:hover {
+	opacity: 1;
 }
 
 .active, .label:hover, .panel:hover {
@@ -336,7 +345,7 @@ input[type=text]:focus, textarea:focus {
   	text-transform: uppercase;
 	color: #001489;
 	box-shadow: 0px 0px 2px 0px #001489;
-  	padding: 0;
+  	padding: 0rem;
 	margin: 1rem;
 	border-radius: 0.1rem;
 }

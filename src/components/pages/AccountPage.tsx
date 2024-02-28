@@ -42,7 +42,7 @@ const AccountPage = () => {
                 }
             })
 
-            centum.title('Account', PROJECT_TITLE)
+            centum.title('Home', PROJECT_TITLE)
             centum.favicon('favicon')
             console.log(info)
         }

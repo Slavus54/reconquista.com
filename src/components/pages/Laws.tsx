@@ -29,7 +29,7 @@ const Laws: React.FC = () => {
             setLaws(data.getLaws)
 
             centum.title('Laws', PROJECT_TITLE)
-            centum.favicon('favicon-pages')
+            centum.favicon('favicon-laws')
         }
     }, [data])
 
