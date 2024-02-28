@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+## Reconquista.com      
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description    
 
-## Available Scripts
+Platform for defenders of Europe from Islam and Communism.    
 
-In the project directory, you can run:
+1. Thousands quotes of european great men and ladies  
+2. Discover many lands with interesting locations and facts    
+3. Organize raids to detect crimes and discuss many themes with other people while event    
+4. Write and offer versions of laws at different levels    
+5. Help ukrainian foundations and persons with own story    
+6. Find and connect via Telegram with interesting defenders    
 
-### `npm start`
+### Technologies   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Frontend: *React, Typescript, Context API, Cache (Local Storage), Axios, GraphQL, Notifications (react-toastify), wouter, centum.js and datus.js*.    
+Backend: *ExpressJS, Apollo, GraphQL, Mongoose, MongoDB, microservices, uniqid*.    
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### URLs  
 
-### `npm test`
+*https://65defdc5bb7acdcb1544b0af--reconquista.netlify.app* - demo URL  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+*https://towns-api.onrender.com/towns* - Towns API (Europe)  
