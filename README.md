@@ -19,6 +19,6 @@ Backend: *ExpressJS, Apollo, GraphQL, Mongoose, MongoDB, microservices, uniqid*.
 
 ### URLs  
 
-*https://65defdc5bb7acdcb1544b0af--reconquista.netlify.app* - demo URL  
+*https://65eb3718bee8ecb4e8fca1c4--reconquista-eu-2024.netlify.app* - demo URL   
 
 *https://towns-api.onrender.com/towns* - Towns API (Europe)  
