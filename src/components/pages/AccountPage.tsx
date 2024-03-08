@@ -62,7 +62,6 @@ const AccountPage = () => {
                         {page !== null && 
                             <div className='item'>
                                 <ImageLook src={page.icon} min={2} max={2} className='icon' />
-                                <h4>{page.title}</h4>
                             </div>
                         }
                     </FormPagination>

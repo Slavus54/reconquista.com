@@ -8,6 +8,10 @@
         "path": "land"
     },
     {
+        "title": "Recipe",
+        "path": "recipe"
+    },
+    {
         "title": "Raid",
         "path": "raid"
     },

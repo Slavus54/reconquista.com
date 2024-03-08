@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {init} from '../../store/localstorage'
 import NavigatorWrapper from '../router/NavigatorWrapper'
 import features from '../../env/features.json'
 
 const Welcome: React.FC = () => {
+
+    useEffect(() => {
+        init()
+    }, [])
 
     return (
         <>          

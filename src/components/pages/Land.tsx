@@ -3,7 +3,7 @@ import ReactMapGL, {Marker} from 'react-map-gl'
 import {useMutation} from '@apollo/client'
 import Centum from 'centum.js'
 import {Datus, date_filters} from 'datus.js'
-import {FACT_TYPES, FACT_LEVELS, LOCATION_TYPES, VIEW_CONFIG, token} from '../../env/env'
+import {FACT_TYPES, COMMON_LEVELS, LOCATION_TYPES, VIEW_CONFIG, token} from '../../env/env'
 import {Context} from '../../context/WebProvider'
 import MapPicker from '../UI/MapPicker'
 import ImageLoader from '../UI/ImageLoader'
@@ -32,7 +32,7 @@ const Land: React.FC<CollectionPropsType> = ({params: {id}}) => {
 
     const [state, setState] = useState({
         text: '',
-        level: FACT_LEVELS[0],
+        level: COMMON_LEVELS[0],
         format: FACT_TYPES[0],
         isTrue: true,
         title: '',
@@ -98,7 +98,7 @@ const Land: React.FC<CollectionPropsType> = ({params: {id}}) => {
             }
         } else {
 
-            let award: number = FACT_LEVELS.indexOf(fact.level) + 1
+            let award: number = COMMON_LEVELS.indexOf(fact.level) + 1
 
             if (isTrue === fact.isTrue) {
                 setPoints(points + award)
@@ -210,7 +210,7 @@ const Land: React.FC<CollectionPropsType> = ({params: {id}}) => {
                                         {FACT_TYPES.map(el => <option value={el}>{el}</option>)}
                                     </select>  
                                     <select value={level} onChange={e => setState({...state, level: e.target.value})}>
-                                        {FACT_LEVELS.map(el => <option value={el}>{el}</option>)}
+                                        {COMMON_LEVELS.map(el => <option value={el}>{el}</option>)}
                                     </select>  
                                 </div>
 

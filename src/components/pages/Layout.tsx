@@ -2,7 +2,6 @@ import {useMemo, useContext} from 'react'
 import {ToastContainer} from 'react-toastify'
 import {Context} from '../../context/WebProvider'
 import Router from '../router/Router'
-import {init} from '../../store/localstorage'
 
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -11,7 +10,6 @@ const Layout = () => {
 
     useMemo(() => {
         change_context('create', null)
-        init()
     }, [context])
 
     return (

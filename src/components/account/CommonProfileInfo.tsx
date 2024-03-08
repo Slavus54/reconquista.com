@@ -50,7 +50,7 @@ const CommonProfileInfo = ({profile, context}: AccountPageComponentProps) => {
             </div>
 
             <h4 className='pale'>Payment: <b>{budget}{EURO_ICON}</b>/month</h4>
-            <input value={budget} onChange={e => setState({...state, budget: parseInt(e.target.value)})} type='range' step={1} />
+            <input value={budget} onChange={e => setState({...state, budget: parseInt(e.target.value)})} type='range' step={2} />
 
             <button onClick={onUpdate}>Update</button>
 

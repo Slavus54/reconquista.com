@@ -16,6 +16,9 @@ import Law from '../pages/Law'
 import CreateLand from '../pages/CreateLand'
 import Lands from '../pages/Lands'
 import Land from '../pages/Land'
+import CreateRecipe from '../pages/CreateRecipe'
+import Recipes from '../pages/Recipes'
+import Recipe from '../pages/Recipe'
 import Profiles from '../pages/Profiles'
 import Profile from '../pages/Profile'
 
@@ -48,6 +51,13 @@ export const routes: RouteType[] = [
         access_value: 1,
         url: '/lands',
         component: Lands,
+        isVisible: true
+    },
+    {
+        title: 'Recipes',
+        access_value: 1,
+        url: '/recipes',
+        component: Recipes,
         isVisible: true
     },
     {
@@ -153,6 +163,20 @@ export const routes: RouteType[] = [
         access_value: 1,
         url: '/land/:id',
         component: Land,
+        isVisible: false
+    },
+    {
+        title: '',
+        access_value: 1,
+        url: '/create-recipe/:id',
+        component: CreateRecipe,
+        isVisible: false
+    },
+    {
+        title: '',
+        access_value: 1,
+        url: '/recipe/:id',
+        component: Recipe,
         isVisible: false
     },
     {

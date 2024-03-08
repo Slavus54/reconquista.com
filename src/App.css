@@ -347,7 +347,7 @@ input[type=text]:focus, textarea:focus {
 	box-shadow: 0px 0px 2px 0px #001489;
   	padding: 0rem;
 	margin: 1rem;
-	border-radius: 0.1rem;
+	border-radius: 1rem;
 }
 
 .tech-info {

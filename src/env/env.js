@@ -47,8 +47,19 @@ export const ISSUE_LEVELS = ['Low', 'Medium', 'High']
 export const LAND_TYPES = ['Hood', 'Nature', 'Park']
 
 export const FACT_TYPES = ['History', 'Life']
-export const FACT_LEVELS = ['Low', 'Medium', 'High', 'Ultra']
+export const COMMON_LEVELS = ['Low', 'Medium', 'High', 'Ultra']
 export const LOCATION_TYPES = ['Building', 'Statue', 'Bridge']
+
+// recipe
+
+export const CUISINES = ['German', 'Slavic', 'Celtic', 'Romanesque', 'Caucasian', 'Scandinavian']
+export const RECIPE_TYPES = ['Dish', 'Dessert', 'Drink']
+export const INGREDIENT_MEASURES = ['g', 'ml', 'spoon']
+
+export const RECIPE_CALORIES_DEFAULT = 450
+
+export const STEP_STAGES = ['Beginnning', 'Middle', 'Ending']
+export const COOKING_RECEIVERS = ['Relative', 'Friend', 'Colleague']
 
 // system
 
